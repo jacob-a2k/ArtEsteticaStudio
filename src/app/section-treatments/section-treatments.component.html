@@ -1,0 +1,23 @@
+<section class="section-treatment" id="treatments">
+  <h2 class="section-title">
+    <span>Zabiegi dla Ciebie</span>
+  </h2>
+  <div class="treatment-container">
+    @for(treatment of treatmentArray; track treatment){
+    <article class="treatment-box" [ngClass]="$index % 2 === 0 ? '': 'switch-side' ">
+      <div class="treatment-box-img">
+        <div class="treatment-img">
+          <div class="treatment-extra-div" [ngClass]="$index % 2 === 0 ? '' : 'change'">
+            <img src="{{treatment.treatmentImg}}"
+              alt="kobieta leze na zabiegu medycznym z użyciem urządzenia em-'body'">
+          </div>
+        </div>
+      </div>
+      <div class="treatment-box-description">
+        <div class="box-description-title">{{treatment.treatmentTitle}}</div>
+        <div class="box-description-text"> {{treatment.treatmentText}} </div>
+      </div>
+    </article>
+    }
+  </div>
+</section>

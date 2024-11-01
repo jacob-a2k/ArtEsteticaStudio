@@ -1,0 +1,31 @@
+<section class="section-about" id="about">
+  <h2 class="section-title">
+    <span>Co nas wyróżnia</span>
+    <fa-icon [icon]="faHandPointDown"></fa-icon>
+  </h2>
+  <div class="section-about-wrapper">
+    @for(component of componentArray; track component){
+    <div class="about-container" (click)="toggleActive($index)"
+      [ngClass]="active && selectedIndex === $index ? 'active' : ''">
+      <div class="about-wrapper">
+        <div class="about-img">
+          <img src="{{component.aboutImg}}" alt="">
+        </div>
+        <span class="about-text">{{component.aboutTitle}}</span>
+      </div>
+      @if(active){
+      <div class="about-specification">
+        @for(text of component.aboutDescription; track text){
+        <div class="about-spec-fade fade-{{$index}}">
+          <span class="about-spec-icon">
+            <fa-icon [icon]="faCheck"></fa-icon>
+          </span>
+          <span class="about-spec-text">{{text}}</span>
+        </div>
+        }
+      </div>
+      }
+    </div>
+    }
+  </div>
+</section>

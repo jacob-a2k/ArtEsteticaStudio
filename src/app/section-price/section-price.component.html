@@ -1,0 +1,35 @@
+<section class="section-price" id="price">
+  <h2 class="section-title">
+    <span>Cennik</span>
+  </h2>
+  <div class="price-containter">
+    @for(service of serviceTable; track service; let i = $index){
+    <div class="service-box">
+      <div class="service-type">
+        <span>{{service.serviceName}}</span>
+        <div class="type-icons">
+          <fa-icon [icon]="faClock"></fa-icon>
+          <fa-icon [icon]="faCoins"></fa-icon>
+        </div>
+      </div>
+      <div class="type-pricing-box">
+        @for(details of service.serviceDetails; track details){
+        <div class="service-part-and-price">
+          <div class="service-part" [ngClass]="{'pulse': i == 0 && $index == 0}">
+            <span>{{details.bodyPart}}</span>
+          </div>
+          <div class="service-numbers-box">
+            <div class="service-time">
+              <span>{{details.time}} min</span>
+            </div>
+            <div class="service-price">
+              <span>{{details.cost}}.00 zł</span>
+            </div>
+          </div>
+        </div>
+        }
+      </div>
+    </div>
+    }
+  </div>
+</section>

@@ -1,0 +1,182 @@
+.footer {
+  background: linear-gradient(to bottom, #f9f6f6 30%, #c4a1a7);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  gap: 4rem;
+  box-shadow: 0 -2px 4px #f9f6f6;
+
+  .footer-container {
+    max-width: 80%;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 60px;
+    gap: 70px;
+
+    .footer-company-name {
+      height: 35px;
+    }
+
+    .company-name {
+      font-style: italic;
+      color: rgb(218, 165, 32);
+      text-shadow: 1px 1px 2px #000;
+      letter-spacing: 2px;
+      display: flex;
+      position: relative;
+    }
+
+    .footer-contact-box {
+      display: flex;
+      flex-direction: column;
+      gap: 42px;
+
+      .footer-data {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+
+        .data-inner-container {
+          display: flex;
+          flex-direction: column;
+          gap: 4px;
+        }
+
+        span:last-child {
+          font-size: 0.8rem;
+        }
+
+        span:first-child {
+          font-size: 1rem;
+          text-transform: uppercase;
+        }
+      }
+
+      .footer-icon {
+        display: flex;
+        gap: 8px;
+        span {
+          color: #3b3032;
+        }
+        a {
+          cursor: pointer;
+          color: inherit;
+          display: flex;
+          gap: 8px;
+          span:hover {
+            color: #333;
+          }
+        }
+        &.working-time {
+          span {
+            padding-bottom: 2px;
+            border-bottom: 1px dashed #000;
+          }
+        }
+        &.footer-last-contact span {
+          padding-bottom: 2px;
+          border-bottom: 1px dashed #000;
+        }
+      }
+    }
+
+    fa-icon {
+      color: rgb(218, 165, 32);
+    }
+  }
+  .footer-socials {
+    padding-top: 5px;
+    .social-list {
+      display: flex;
+      gap: 1.3rem;
+      fa-icon {
+        font-size: 20px;
+        color: #000;
+      }
+      .social {
+        display: flex;
+        justify-content: center;
+        align-content: center;
+        width: 40px;
+        border-radius: 10px;
+        &.fb:hover fa-icon,
+        &.insta:hover fa-icon {
+          color: rgb(218, 165, 32);
+        }
+        a {
+          display: inline-block;
+          align-content: center;
+          justify-content: center;
+        }
+      }
+      button {
+        font-size: 35px;
+      }
+    }
+  }
+
+  .author {
+    font-size: 0.8rem;
+    padding-bottom: 10px;
+    color: rgb(221, 221, 221, 80%);
+  }
+}
+
+@media (min-width: 576px) {
+}
+
+@media (min-width: 768px) {
+}
+
+@media (min-width: 992px) {
+}
+
+@media (min-width: 1200px) {
+  // .footer {
+  //   .footer-container {
+  //     .footer-company-name {
+  //       div {
+  //         font-size: 50px;
+  //       }
+  //     }
+  //   }
+  // }
+}
+
+@media (min-width: 1400px) {
+  .footer {
+    background: inherit;
+    box-shadow: none;
+    display: flex;
+    justify-content: space-between;
+    gap: 222px;
+
+    .footer-container {
+      max-width: none;
+      align-items: start;
+
+      .footer-contact-box {
+        .footer-data {
+          span:first-child {
+            font-size: 1.5rem;
+          }
+          .data-inner-container {
+            gap: 8px;
+          }
+
+          .footer-icon {
+            fa-icon {
+              font-size: 1.2rem;
+            }
+            span {
+              font-size: 1rem;
+            }
+          }
+        }
+      }
+    }
+  }
+}

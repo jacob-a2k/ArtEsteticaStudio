@@ -1,0 +1,121 @@
+.treatment-container {
+  margin: 2rem 30px 0;
+}
+
+.treatment-box {
+  width: 100%;
+  height: 200px;
+  display: flex;
+  &.switch-side {
+    flex-direction: row-reverse;
+  }
+
+  .treatment-box-img {
+    position: relative;
+    width: 40%;
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    .treatment-img {
+      height: 100%;
+      display: flex;
+      align-items: center;
+      .treatment-extra-div {
+        // height: 100%;
+        // width: 100%;
+        position: relative;
+      }
+      img {
+        max-height: 100%;
+        width: 100%;
+        position: relative;
+        z-index: 1;
+      }
+      ::after {
+        content: "";
+        position: absolute;
+        top: 10px;
+        left: -10px;
+        right: 10px;
+        bottom: -6px;
+        border: 1px solid rgba(196, 161, 167, 1);
+      }
+      .change::after {
+        left: 10px;
+        right: -10px;
+      }
+    }
+  }
+
+  .treatment-box-description {
+    height: 100%;
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    padding: 20px;
+
+    .box-description-title {
+      text-align: center;
+    }
+
+    .box-description-text {
+      font-size: 0.7rem;
+      color: #aaa;
+      text-align: center;
+    }
+  }
+}
+
+@media (min-width: 576px) {
+  .section-treatment {
+    margin-bottom: 40px;
+    .treatment-container {
+      display: flex;
+      flex-direction: column;
+      gap: 60px;
+    }
+  }
+}
+
+@media (min-width: 768px) {
+  .section-treatment {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .treatment-box {
+    height: 100%;
+    align-items: center;
+  }
+}
+
+@media (min-width: 992px) {
+  .treatment-container {
+    max-width: 1200px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .section-treatment {
+    margin-bottom: 50px;
+
+    .treatment-box {
+      .treatment-box-description {
+        .box-description-title {
+          font-size: 1.2rem;
+        }
+        .box-description-text {
+          font-size: 1rem;
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 1400px) {
+}

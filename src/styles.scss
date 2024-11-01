@@ -1,1 +1,88 @@
-/* You can add global styles to this file, and also import other style files */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  scroll-behavior: smooth;
+}
+
+ul,
+ol {
+  list-style-type: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+button {
+  background: none;
+  color: inherit;
+  border: none;
+  padding: 0;
+  font: inherit;
+  cursor: pointer;
+  outline: inherit;
+}
+
+section {
+  padding-top: 2.4rem;
+  &.section-main {
+    padding-top: 0;
+  }
+}
+
+.section-title {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 5px;
+  justify-content: center;
+  margin: 15px;
+  color: #c4a1a7;
+  font-size: 1.4rem;
+  text-shadow: 1px 1px #000;
+  fa-icon {
+    opacity: 0;
+    animation: hide-and-show 1.6s infinite;
+  }
+}
+@keyframes hide-and-show {
+  from {
+    opacity: 0;
+  }
+  20% {
+    opacity: 0.25;
+  }
+  40% {
+    opacity: 0.5;
+  }
+  60% {
+    opacity: 0.75;
+  }
+  80% {
+    opacity: 0.25;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@media (min-width: 576px) {
+}
+
+@media (min-width: 768px) {
+  .section-title {
+    font-size: 2rem;
+  }
+}
+
+@media (min-width: 992px) {
+}
+
+@media (min-width: 1200px) {
+}

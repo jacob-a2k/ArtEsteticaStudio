@@ -1,0 +1,148 @@
+.carousel-container {
+  position: relative;
+  text-align: center;
+  width: 100%;
+  height: calc(100vh - 165px);
+  box-shadow: 0 8px 16px #dce1e1;
+  overflow: hidden;
+  img {
+    display: none;
+  }
+  img.image-active {
+    display: block;
+    width: 100%;
+    height: calc(100vh - 165px);
+    object-fit: cover;
+    // max-height: 400px;
+  }
+  .booking-box {
+    cursor: pointer;
+    position: absolute;
+    right: -45px;
+    top: 43%;
+    transform: rotate(270deg) translate(-50%, 50%);
+    border: 1px solid rgba(0, 0, 0, 0.608);
+    color: rgba(255, 255, 255, 0.595);
+    border-radius: 10px;
+    display: flex;
+    justify-self: start;
+    transition: all 0.3s ease-in-out;
+    &:hover {
+      transform: rotate(270deg) translate(-50%, 30%) scale(1.2);
+      background-color: rgba(243, 236, 237, 0.492);
+    }
+
+    a {
+      color: inherit;
+      padding: 10px 20px 40px;
+      font-size: 1.8rem;
+      line-height: 0.8;
+      text-shadow: 1px 1px 1px hsla(0, 0%, 0%, 0.607);
+    }
+  }
+}
+
+// image transition fade effect
+.fade {
+  animation-name: fade;
+  animation-duration: 0.8s;
+}
+@keyframes fade {
+  from {
+    opacity: 0.5;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+// dots/indicators
+.carousel-line-container {
+  position: absolute;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  display: flex;
+  justify-content: center;
+  padding: 0;
+  margin-bottom: 0.5rem;
+}
+
+.line {
+  cursor: pointer;
+  height: 2px;
+  width: 100%;
+  margin: 0 5px;
+  background-color: #fff;
+  display: inline-block;
+  opacity: 0.4;
+  transition: opacity 0.6s ease;
+  &.active {
+    opacity: 1;
+  }
+}
+
+.btn-carousel {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 15%;
+  padding: 0;
+  color: #fff;
+  text-align: center;
+  background: 0 0;
+  border: 0;
+  font-size: 35px;
+  cursor: pointer;
+  &.btn-prev {
+    left: 0;
+  }
+  &.btn-next {
+    right: 0;
+  }
+  .icon-carousel {
+    color: #fff;
+    opacity: 0.5;
+    transition: all 0.15s ease;
+    &:hover {
+      opacity: 0.9;
+    }
+    &:active {
+      opacity: 0.5;
+    }
+  }
+  // .icon-prev {
+  //   font-size: 35px;
+  // }
+}
+
+@media (min-width: 576px) {
+}
+
+@media (min-width: 768px) {
+  .carousel-container {
+    .booking-box {
+      .booking-btn {
+        font-size: 2.3rem;
+      }
+    }
+  }
+}
+
+@media (min-width: 992px) {
+}
+
+@media (min-width: 1200px) {
+  .carousel-line-container {
+    width: 50%;
+    margin: 0 auto 8px;
+    .line {
+      margin: 0 20px;
+    }
+  }
+}
+@media (min-width: 1400px) {
+}

@@ -1,0 +1,59 @@
+.arrows-reveal-box {
+  height: 55px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.arrow-reveal {
+  text-align: center;
+  width: 100%;
+  height: 100%;
+  font-size: 4rem;
+  stroke: gold;
+  stroke-width: 1.4px;
+  fill: transparent;
+  svg {
+    height: 100%;
+    width: 60px;
+    path {
+      animation: arrow 2s infinite;
+      &.line-3 {
+        animation-delay: 1s;
+      }
+      &.line-2 {
+        animation-delay: 0.5s;
+      }
+    }
+  }
+}
+
+@keyframes arrow {
+  0% {
+    opacity: 0;
+  }
+  40% {
+    opacity: 1;
+  }
+  80% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@media (min-width: 576px) {
+}
+
+@media (min-width: 768px) {
+}
+
+@media (min-width: 992px) {
+}
+
+@media (min-width: 1200px) {
+}
+
+@media (min-width: 1400px) {
+}

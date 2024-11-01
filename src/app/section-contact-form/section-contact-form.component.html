@@ -1,0 +1,39 @@
+<section class="section-contact-form" id="contact-form">
+  <div class="section-contact-container">
+    <div class="contact-top">
+      <h2 class="section-title">
+        <span>Formularz</span>
+      </h2>
+      <div class="contact-text">
+        <span class="text">Wypełnij, a ja odpowiem najszybciej jak to możliwe.</span>
+      </div>
+    </div>
+    <div class="contact-bottom">
+
+      <form [formGroup]="applyForm" (ngSubmit)="submitForm()" class="contact-form">
+        <div class="cta-field">
+          <label for="name">Imię</label>
+          <input id="name" type="text" placeholder="Jan" required formControlName="firstName">
+        </div>
+        <div class="cta-field">
+          <label for="surname">Nazwisko</label>
+          <input id="surname" type="text" placeholder="Kowalski" required formControlName="lastName">
+        </div>
+        <div class="cta-field">
+          <label for="phone">Telefon</label>
+          <input id="phone" type="number" placeholder="111 222 333" required formControlName="phoneNum">
+        </div>
+        <div class="cta-field">
+          <label for="mail">Email</label>
+          <input id="mail" type="email" placeholder="jan@kowalski.com" required formControlName="email">
+        </div>
+        <div class="cta-field">
+          <label for="text">Treść wiadomości</label>
+          <textarea name="text" id="text" rows="5" cols="15" placeholder="Jak mogę Pani/Panu pomóc?"
+            formControlName="userText"></textarea>
+        </div>
+        <button type="submit" class="btn-form">Wyślij</button>
+      </form>
+    </div>
+  </div>
+</section>

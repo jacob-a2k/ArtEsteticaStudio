@@ -1,0 +1,70 @@
+<footer class="footer">
+  <div class="footer-container" id="footer-container">
+    <div #observed class="company-name footer-company-name">
+      <div [@show-from-left]="elementInView ? 'show' : 'hide'">
+        <span class="company-left-word">Art</span>
+      </div>
+      <div [@show-from-top]="elementInView ? 'show' : 'hide'">
+        <span class="company-dash-sign">-</span>
+      </div>
+      <div [@show-from-right]="elementInView ? 'show' : 'hide'">
+        <span class="company-right-word">Estetica</span>
+      </div>
+    </div>
+    <!-- <div class="footer-bottom-box">
+        
+      </div> -->
+    <div class="footer-contact-box">
+      <div class="footer-data">
+        <span class="data-title">GODZINY OTWARCIA</span>
+        <div class="footer-icon working-time">
+          <fa-icon [icon]="faUserClock"></fa-icon>
+          <span>Elastyczny czas pracy</span>
+        </div>
+      </div>
+      <div class="footer-data">
+        <span class="data-title">DANE KONTAKTOWE</span>
+        <div class="data-inner-container">
+          <div class="footer-icon">
+            <a href="tel:48731898388" title="Zadzwoń">
+              <fa-icon [icon]="faMobileScreen"></fa-icon>
+              <span> +48 731 898 388</span>
+            </a>
+          </div>
+          <div class="footer-icon">
+            <a href="mailto:art.estetica6@gmail.com" title="Napisz">
+              <fa-icon [icon]="faAt"></fa-icon>
+              <span>art.estetica6&#64;gmail.com</span>
+            </a>
+          </div>
+          <div class="footer-icon footer-last-contact" title="Pokaż lokalizacje">
+            <a href="https://www.google.com/maps/place/Prywatny+Gabinet+Stomatologiczny+Lek+Stom/@49.9457499,21.8373269,17z/data=!3m1!4b1!4m6!3m5!1s0x473cff5cca7ee3f9:0x8b78c2710021cde2!8m2!3d49.9457499!4d21.8373269!16s%2Fg%2F11h7zf9m1m?hl=pl&entry=ttu&g_ep=EgoyMDI0MTAxNi4wIKXMDSoASAFQAw%3D%3D"
+              target="_blank" rel="noopener noreferrer">
+              <fa-icon [icon]="faLocationDot"></fa-icon>
+              <span>Rynek 9, 38-120 Czudec</span>
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="footer-data">
+        <span class="data-title">SOCIAL MEDIA</span>
+        <div class="footer-socials">
+          <ul class="social-list">
+            <li class="social fb"><a href="https://www.facebook.com/aleksandra.materna.18" target="_blank"
+                rel="noopener noreferrer">
+                <fa-icon class="fb" [icon]="faFacebook"></fa-icon>
+              </a></li>
+            <li class="social insta"><a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer">
+                <fa-icon class="insta" [icon]="faInstagram"></fa-icon>
+              </a></li>
+            <!-- <li class="social"><a href="#">
+              <fa-icon class="yt" [icon]="faYoutube"></fa-icon>
+            </a></li> -->
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="author">Copyright &copy; 2024 jakub-a2k</div>
+</footer>

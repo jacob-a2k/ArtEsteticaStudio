@@ -1,0 +1,25 @@
+<section class="section-effects" id="effect">
+  <h2 class="section-title">
+    <span>Wspólne Efekty</span>
+  </h2>
+  <div class="effects-container">
+    @for(effect of effectArray; track effect){
+    <article class="effect-box">
+      <div class="procedure-title">
+        <fa-icon [icon]="faShieldHeart"></fa-icon>
+        <span>{{effect.procedureTitle}}</span>
+      </div>
+      <div class="procedure-img">
+        <img src="{{effect.effectImg}}" alt="{{effect.effectAlt}}">
+      </div>
+      <div class="procedure-text">
+        <div class="icon-and-name">
+          <fa-icon [icon]="faComments"></fa-icon>
+          <span class="customer-name">{{effect.customerName}}</span>
+        </div>
+        <span class="customer-text"><q>{{effect.customerOpinion}}</q></span>
+      </div>
+    </article>
+    }
+  </div>
+</section>

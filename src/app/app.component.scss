@@ -1,0 +1,44 @@
+.scroll-to-top {
+  position: fixed;
+  bottom: 15px;
+  right: 15px;
+  color: #9d8186;
+  border: 2px solid #9d8186;
+  border-radius: 10px;
+  padding: 10px;
+  background-color: rgba(255, 255, 255, 0.492);
+  cursor: pointer;
+  font-size: 18px;
+  transition: opacity 0.3s ease;
+  z-index: 3;
+  &:hover {
+    color: #3b3032;
+    border: 2px solid #3b3032;
+  }
+}
+
+@media (min-width: 576px) {
+}
+
+@media (min-width: 768px) {
+  .scroll-to-top {
+    font-size: 30px;
+  }
+}
+
+@media (min-width: 992px) {
+}
+
+@media (min-width: 1200px) {
+}
+
+@media (min-width: 1400px) {
+  .full-screen-solution {
+    display: flex;
+    flex-direction: row-reverse;
+    width: 100%;
+    background: linear-gradient(to bottom, #f9f6f6 30%, #c4a1a7);
+    justify-content: space-around;
+    align-items: center;
+  }
+}

@@ -1,0 +1,96 @@
+.section-effects {
+  background-image: url("../../../public/assets/background.jpg");
+  background-size: cover;
+  padding-bottom: 3rem;
+}
+
+.effect-box {
+  margin-top: 2.6rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  fa-icon {
+    color: rgba(196, 161, 167, 1);
+  }
+
+  .procedure-title {
+    display: flex;
+    gap: 8px;
+    margin-bottom: 10px;
+  }
+  .procedure-img {
+    margin: 0 30px;
+    max-width: 300px;
+    height: auto;
+    text-align: center;
+    img {
+      width: 100%;
+      height: auto;
+    }
+  }
+
+  .procedure-text {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    font-size: 0.7rem;
+
+    .icon-and-name {
+      display: flex;
+      gap: 8px;
+      margin-top: 5px;
+      margin-bottom: 3px;
+
+      .customer-name {
+        font-size: 0.9rem;
+      }
+    }
+    .customer-text {
+      color: #aaa;
+    }
+  }
+}
+
+.effects-container {
+  article:first-child {
+    margin-top: 3rem;
+  }
+}
+
+@media (min-width: 576px) {
+  .effects-container {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    row-gap: 40px;
+  }
+}
+
+@media (min-width: 768px) {
+}
+
+@media (min-width: 992px) {
+}
+
+@media (min-width: 1200px) {
+  .section-effects {
+    margin-bottom: 50px;
+    .effects-container {
+      grid-template-columns: repeat(4, 1fr);
+
+      .procedure-text {
+        font-size: 0.8rem;
+        .icon-and-name {
+          .customer-name {
+            font-size: 1rem;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 1200px) {
+}
